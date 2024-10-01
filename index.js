@@ -7,24 +7,24 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice == "Rock" && computerChoice == "Paper") {
     console.log("You lose! Paper beats Rock");
     computerScore++;
-  } else if (humanChoice == "Rock" && computerChoice == "Scissors") {
-    console.log("You won! Rocks beats Scissors");
+  } else if (humanChoice == "Rock" && computerChoice == "Scissor") {
+    console.log("You won! Rocks beats Scissor");
     humanScore++;
   } else if (humanChoice == "Paper" && computerChoice == "Paper") {
     console.log("Its a Draw!");
-  } else if (humanChoice == "Paper" && computerChoice == "Scissors") {
-    console.log("You lose! Scissors beats Paper");
+  } else if (humanChoice == "Paper" && computerChoice == "Scissor") {
+    console.log("You lose! Scissor beats Paper");
     computerScore++;
   } else if (humanChoice == "Paper" && computerChoice == "Rock") {
     console.log("You won! Paper beats rock");
     humanScore++;
-  } else if (humanChoice == "Scissors" && computerChoice == "Scissors") {
+  } else if (humanChoice == "Scissor" && computerChoice == "Scissor") {
     console.log("Its a Draw!");
-  } else if (humanChoice == "Scissors" && computerChoice == "Rock") {
-    console.log("You lose! Rock beats Scissors");
+  } else if (humanChoice == "Scissor" && computerChoice == "Rock") {
+    console.log("You lose! Rock beats Scissor");
     computerScore++;
-  } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
-    console.log("You won! Scissors beats Paper");
+  } else if (humanChoice == "Scissor" && computerChoice == "Paper") {
+    console.log("You won! Scissor beats Paper");
     humanScore++;
   }
   return humanScore, computerScore;
@@ -38,16 +38,16 @@ function getComputerChoice() {
   } else if (number == 2) {
     choice = "Paper";
   } else {
-    choice = "Scissors";
+    choice = "Scissor";
   }
   return choice;
 }
 
 function getHumanChoice() {
   let choice;
-  const validChoices = ["Scissors", "Rock", "Paper"];
+  const validChoices = ["Scissor", "Rock", "Paper"];
   while (true) {
-    choice = prompt("Whats your choice between, rock paper and scissors?");
+    choice = prompt("Whats your choice between, rock paper and scissor?");
     choice = choice.charAt(0).toUpperCase() + choice.slice(1);
     if (validChoices.includes(choice)) {
       break;
