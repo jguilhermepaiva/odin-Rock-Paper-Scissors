@@ -1,6 +1,22 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const rockButton = document.querySelector(".rock");
+const paperButton = document.querySelector(".paper");
+const scissorButton = document.querySelector(".scissor");
+
+
+rockButton.addEventListener("click", () => {
+  alert("Hello World");
+});
+paperButton.addEventListener("click", () => {
+  alert("Hello World");
+});
+scissorButton.addEventListener("click", () => {
+  alert("Hello World");
+});
+
+
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "Rock" && computerChoice == "Rock") {
     console.log("Its a Draw!");
@@ -59,13 +75,13 @@ function getHumanChoice() {
 }
 
 function playGame() {
-  for (var round = 0; round < 5; round++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
+  // for (var round = 0; round < 5; round++) {
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
 
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score: " + humanScore + " Computer Score: " + computerScore);
-  }
+  playRound(humanSelection, computerSelection);
+  console.log("Human Score: " + humanScore + " Computer Score: " + computerScore);
+
   if (round == 5) {
     if (humanScore > computerScore) {
       console.log("The winner is: Human with " + humanScore + " points!");
