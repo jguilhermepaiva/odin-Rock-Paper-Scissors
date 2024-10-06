@@ -78,38 +78,4 @@ function getComputerChoice() {
   return choice;
 }
 
-// function getHumanChoice() {
-//   let choice;
-//   const validChoices = ["Scissor", "Rock", "Paper"];
-//   while (true) {
-//     choice = prompt("Whats your choice between, rock paper and scissor?");
-//     choice = choice.charAt(0).toUpperCase() + choice.slice(1);
-//     if (validChoices.includes(choice)) {
-//       break;
-//     } else {
-//       window.alert("Please enter a valid input");
-//     }
-//   }
-//   return choice;
-// }
 
-//  function playGame() {
-//    for (var round = 0; round < 5; round++) {
-//    const humanSelection = getHumanChoice();
-//    const computerSelection = getComputerChoice();
-
-//    playRound(humanSelection, computerSelection);
-//    console.log("Human Score: " + humanScore + " Computer Score: " + computerScore);
-//    }
-//    if (round == 5) {
-//      if (humanScore > computerScore) {
-//        console.log("The winner is: Human with " + humanScore + " points!");
-//      } else if (humanScore < computerScore) {
-//        console.log("The winner is: Computer with " + computerScore + " points!");
-//      } else {
-//        console.log("The game ends with a draw!");
-//      }
-//    }
-//  }
-
-//  playGame();
